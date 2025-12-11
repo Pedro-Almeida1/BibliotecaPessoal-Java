@@ -16,7 +16,7 @@ public class Livro {
             this.anoDePublicacao = 0;
         }
         this.categoria = livroDto.categories();
-        this.imageLinks = livroDto.imageLinks();
+        this.imagens = livroDto.imageLinks();
     }
 
     private String titulo;
@@ -25,23 +25,34 @@ public class Livro {
     private String descricao;
     private String editora;
     private String categoria;
-    private ImageLinksDto imageLinks;
+    private ImageLinksDto imagens;
 
     public String getTitulo() {
         return titulo;
     }
 
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
-    //Adicionar nome do autor
     public String getAutor() {
         return autor;
     }
 
-    public void setAutor(String autor) {
-        this.autor = autor;
+    public int getAnoDePublicacao() {
+        return anoDePublicacao;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public String getEditora() {
+        return editora;
+    }
+
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public ImageLinksDto getImageLinks() {
+        return imagens;
     }
 
     @Override
@@ -56,6 +67,7 @@ public class Livro {
                 Imagem:        %s
                 Data Publicação:    %d
                 -----------------------
-                """, titulo, autor, editora, categoria, descricao, imageLinks.thumbnail(), anoDePublicacao);
+                """, titulo, autor, editora, categoria, descricao, imagens.thumbnail(), anoDePublicacao);
     }
+
 }
