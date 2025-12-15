@@ -1,4 +1,4 @@
-package br.com.model.classes;
+package br.com.model;
 
 import br.com.model.dto.ImageLinksDto;
 import br.com.model.dto.LivroDto;
