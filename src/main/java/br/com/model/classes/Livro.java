@@ -1,4 +1,4 @@
-package br.com.model;
+package br.com.model.classes;
 
 import br.com.model.dto.ImageLinksDto;
 import br.com.model.dto.LivroDto;
@@ -58,6 +58,7 @@ public class Livro {
     @Override
     public String toString() {
         return String.format("""
+
                 -------  Livro  -------
                 Título:        %s
                 Autor:         %s
@@ -67,6 +68,7 @@ public class Livro {
                 Imagem:        %s
                 Data Publicação:    %d
                 -----------------------
+                
                 """, titulo, autor, editora, categoria, descricao, imagens.thumbnail(), anoDePublicacao);
     }
 
