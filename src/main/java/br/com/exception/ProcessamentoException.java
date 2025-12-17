@@ -1,4 +1,4 @@
-package br.com.model.exception;
+package br.com.exception;
 
 public class ProcessamentoException extends Exception {
     

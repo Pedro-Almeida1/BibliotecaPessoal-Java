@@ -1,24 +1,21 @@
-package br.com.model.classes;
+package br.com.service;
 
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import br.com.exception.ProcessamentoException;
 import br.com.model.Livro;
-import br.com.model.exception.ProcessamentoException;
 
 public class LivrosFavoritos {
 
-    private ArrayList<Livro> livrosFavoritosList;
+    private List<Livro> livrosFavoritosList = new ArrayList<>();
 
-    public LivrosFavoritos() {
-        this.livrosFavoritosList = new ArrayList<>();
-    }
-
-    public void adicionarLivroAoFavoritos(Livro livro) throws ProcessamentoException {
+    public void adicionarLivroAoFavoritos(Livro livro) {
         livrosFavoritosList.add(livro);
     }
 
@@ -33,7 +30,7 @@ public class LivrosFavoritos {
         }
     }
 
-    public ArrayList getLivrosFavoritosList() {
+    public List<Livro> getLivrosFavoritosList() {
         return livrosFavoritosList;
     }
 

@@ -1,4 +1,4 @@
-package br.com.model.classes;
+package br.com.service;
 
 import java.io.IOException;
 import java.net.URLEncoder;
@@ -12,12 +12,12 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.Strictness;
 
+import br.com.exception.ProcessamentoException;
 import br.com.model.Livro;
 import br.com.model.dto.GoogleBooksResponseDto;
 import br.com.model.dto.ItemDto;
 import br.com.model.dto.LivroDto;
 import br.com.model.dto.VolumeInfoDto;
-import br.com.model.exception.ProcessamentoException;
 
 public class BuscarLivro {
 
@@ -35,7 +35,7 @@ public class BuscarLivro {
                 throw new ProcessamentoException("Erro na requisição: " + response.statusCode());
             }
             String json = response.body();
-            Gson gson = new GsonBuilder().setStrictness(Strictness.STRICT).setPrettyPrinting().create();
+            Gson gson = new GsonBuilder().setStrictness(Strictness.STRICT).create();
             GoogleBooksResponseDto googleBooksResponse = gson.fromJson(json, GoogleBooksResponseDto.class);
             if (googleBooksResponse.items() == null || googleBooksResponse.items().isEmpty()) {
                 throw new ProcessamentoException("não foi possivel encontrar o livro");
