@@ -20,7 +20,7 @@ O resultado é uma aplicação de linha de comando (Console) desenvolvida para b
 
 ## 🛠️ Como Executar o Projeto
 
-1. Certifique-se de ter o **Java (JDK)** instalado na sua máquina.
+1. ter o **Java (JDK)** instalado na sua máquina.
 2. Clone este repositório:
    ```bash
    git clone [https://github.com/seu-usuario/bibliotecapessoal.git](https://github.com/seu-usuario/bibliotecapessoal.git)
